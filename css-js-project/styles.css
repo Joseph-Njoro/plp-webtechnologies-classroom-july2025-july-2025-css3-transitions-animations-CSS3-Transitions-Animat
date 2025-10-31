@@ -1,0 +1,59 @@
+// css-js-project/styles.css
+
+:root {
+  --primary: #0a84ff;
+  --secondary: #0f172a;
+  --accent: #22c55e;
+  --bg: #f8fafc;
+  --text: #1e293b;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: var(--secondary);
+  color: white;
+  padding: 2rem 0;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+/* CSS animation section */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary);
+  margin: 2rem auto;
+  border-radius: 10px;
+  transition: transform 1s ease;
+}
+
+.box.animate {
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); background-color: var(--primary); }
+  100% { transform: scale(1.2); background-color: var(--accent); }
+}
+
